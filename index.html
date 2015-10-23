@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DOM Manipulation</title>
+
+  <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body class="container">
+
+  <header>
+    <h1>Interactive DOM Manipulation</h1>
+    <p class="lead">Use the below controls to modify the content on this page!</p>
+  </header>
+
+  <main id="content" class="boxed">
+    <header>
+      <h2 id="title">Header</h2>
+      <p id="logline">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, consectetur reiciendis labore.</p>
+    </header>
+    <article>
+      <h2>Article 1</h2>
+      <section>
+        <h3>Section 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </section>
+      <section>
+        <h3>Section 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est et quaerat cum, dolores, nobis beatae, accusamus eius totam cumque suscipit error quidem harum alias voluptates ducimus nostrum molestiae obcaecati eaque.</p>
+        <p>Nemo sequi, amet quo cumque necessitatibus quis. Iste porro dolores, illo aliquam qui eos reprehenderit tenetur, omnis vero, modi culpa non aut aliquid corrupti sit aspernatur! Tempore, ut quos repellendus!</p>
+      </section>
+    </article>
+
+    <article>
+      <h2>Article 2</h2>
+      <p>etc...</p>
+    </article>
+      
+    <article id="appendix">
+      <section>
+        <h2>Appendix</h2>
+        <aside>You bet!</aside>
+        <ul id="list">
+          <li id="item1">Item 1</li>
+          <li id="item2">Item 2</li>
+          <li id="item3">Item 3</li>
+        </ul>
+      </section>      
+    </article>  
+  </main>
+
+  <div id="controls" class="boxed">
+    <h2>Controls</h2>
+    <form id="manipulator">
+      <p>
+        <label for="selector">Element to modify:</label>
+        <input type="text" name="selector" id="selector" placeholder="A jQuery selector...">
+        <label for="newContent">Content to apply:</label>
+        <input type="text" name="content" id="newContent" placeholder="Some content...">
+      </p>
+      <p>
+        <button id="change-content" type="button" class="btn btn-default">Change Content</button>
+        changes the content of the specified element
+      </p>
+      <p>
+        <button id="add-at-end" type="button" class="btn btn-default">Add At End</button> 
+        adds the content at the end of the element
+      </p>
+      <p>
+        <button id="add-at-start" type="button" class="btn btn-default">Add At Start</button> 
+        add the content at the beginning of the element
+      </p>
+      <p>
+        <button id="insert-before" type="button" class="btn btn-default">Insert Before</button>
+        adds the content <em>before</em> the element
+      </p>
+      <p>
+        <button id="move-after" type="button" class="btn btn-default">Move to After</button>
+        moves the "element" to be after the element selected by the "content" (we're re-using the inputs, even if the labels don't match)
+      </p>
+      <p>
+        <button id="surround-class" type="button" class="btn btn-default">Surround with Class</button>
+        surrounds the element with a <code>&lt;div&gt;</code> with a <code>class</code> specified in the "content". You can use the classes in <code>main.css</code> or add your own!
+      </p>
+      <p>
+        <button id="hide-text" type="button" class="btn btn-default">Hide Long Text</button>
+        surrounds the element with a <code>&lt;div class="hidden"&gt;</code> if its content is longer than 12 characters. <strong><em>Challenging!</em></strong>
+      </p>
+      <p>
+        <button id="remove-word" type="button" class="btn btn-default">Remove Word</button>
+        removes the element if it contains the word specified in the "content"
+      </p>
+    </form>
+  </div>
+  <div class="boxed">
+    <h1>Bonus</h1>
+    <p>If you feel confident in your jQuery skills and have completed the steps above, store each action you've taken in a Parse database, and create a button that, when clicked, executes all of the actions that you've have previously taken</p>
+  </div>
+
+
+  <!-- jQuery -->
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <!-- your script file -->
+  <script src="js/main.js"></script>
+</body>
+</html>
